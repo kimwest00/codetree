@@ -7,16 +7,18 @@ count = 0
 for i in range(n):
     for j in range(n):
         try:
-            if arr[i-1][j]==1 and i-1>=0:
+            if arr[i-1][j]==1:
                 count +=1
-            if arr[i][j-1]==1 and j-1>=0:
+            if arr[i][j-1]==1 :
                 count +=1
-            if arr[i+1][j] ==1 and i+1 <=n:
+            if arr[i+1][j] ==1:
                 count +=1
-            if arr[i][j+1] == 1 and j+1 <=n:
+            if arr[i][j+1] == 1:
                 count +=1
         except:
             pass
         if count >= 3:
             cell_count +=1
+        print(count)
         count = 0
+print(cell_count)
