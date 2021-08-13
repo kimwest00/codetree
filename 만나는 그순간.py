@@ -34,6 +34,9 @@ for i in range(len(A)):
         print(i+1)
         break
 print(A,B,len(A))
+    else:
+            if i == len(A)-1:
+                print(-1)
 #출력해야하는 답 : A,B가 최초로 만나는 시점(안만나면 -1출력)
 #구현하기 어려운부분:
 #    0. 번갈아 A와 B정보가 아닌, A정보 쫙, B정보 쫙
