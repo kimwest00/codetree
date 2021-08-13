@@ -6,11 +6,17 @@ xposition = 0
 yposition = 0
 for i in move:
     if i =="L":
-        xdir = -1
-        ydir = 0
+        #반시계방향
+        #(0,1)->(-1,0)->(0,-1)->(1,0)->(0,1)
+        empty = xdir
+        xdir = -ydir
+        ydir = empty
     elif i=="R":
-        xdir = 1
-        ydir = 0
+       #시계방향
+        #(0,1)->(1,0)->(0,-1)->(-1,0)->(0,1)
+        empty = xdir
+        xdir = ydir
+        ydir = -empty
     else:#i==F
         xposition += xdir
         yposition += ydir
