@@ -6,14 +6,17 @@ count = 0
 #무식하게 하나하나 다 세볼거다
 for i in range(n):
     for j in range(n):
-        if arr[i-1][j]==1 and i-1>=0:
-            count +=1
-        elif arr[i][j-1]==1 and j-1>=0:
-            count +=1
-        elif arr[i+1][j] ==1 and i+1 <=n:
-            count +=1
-        elif arr[i][j+1] == 1 and j+1 <=n:
-            count +=1
+        try:
+            if arr[i-1][j]==1 and i-1>=0:
+                count +=1
+            if arr[i][j-1]==1 and j-1>=0:
+                count +=1
+            if arr[i+1][j] ==1 and i+1 <=n:
+                count +=1
+            if arr[i][j+1] == 1 and j+1 <=n:
+                count +=1
+        except:
+            pass
         if count >= 3:
             cell_count +=1
         count = 0
